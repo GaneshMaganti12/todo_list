@@ -1,0 +1,30 @@
+.list-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.input-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-check{
+    height: 14px;
+    width: 14px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.label{
+    font-size: 16px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+.icon-card{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+}
+.checked{
+    text-decoration: line-through;
+}

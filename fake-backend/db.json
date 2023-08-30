@@ -1,0 +1,19 @@
+{
+  "todolist": [
+    {
+      "id": "93601350-1b10-4edb-8657-44dfb2e39b71",
+      "task": "Node Js",
+      "isCompleted": false
+    },
+    {
+      "id": "2d471dbd-5a02-4f3f-9241-9e104bf8d092",
+      "task": "Mongo DB",
+      "isCompleted": false
+    },
+    {
+      "id": "975a034b-0051-46fc-8595-8869a6cb20c3",
+      "task": "React Js",
+      "isCompleted": false
+    }
+  ]
+}
