@@ -18,7 +18,14 @@ function App() {
   const getData = async() =>{
     try {
       const res = await axios.get("http://localhost:3001/todolist")
-      setTodoList(res.data)
+      // setTodoList(res.data)               for fake backend
+      setTodoList(res.data.data.map((todo) => {                 // for database backend
+        return {
+          id: todo._id,
+          task: todo.task,
+          isCompleted: todo.isCompleted
+        }
+      }))
     } catch (error) {
       console.log(error)
     }
@@ -26,7 +33,7 @@ function App() {
 
   const addTodo = async() =>{
     const newData = {
-      id: uuidv4(),
+      // id: uuidv4(),          for fake backend
       task: todoTask,
       isCompleted: false
     }
@@ -52,7 +59,6 @@ function App() {
   const clickItem = async({id, task, isCompleted}) =>{
     try {
       const updatedData = {
-        id,
         task,
         isCompleted: !isCompleted
       }
@@ -73,7 +79,6 @@ function App() {
   const updatedTodo = async() =>{
     try {
       const updatedData = {
-        id: updateId,
         task: todoTask,
         isCompleted: false
       }
