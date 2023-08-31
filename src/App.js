@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import {v4 as uuidv4} from "uuid"
+// import {v4 as uuidv4} from "uuid"                for fake backend
 import './App.css';
 import Todo from "./components/Todo/Todo";
 
@@ -59,6 +59,7 @@ function App() {
   const clickItem = async({id, task, isCompleted}) =>{
     try {
       const updatedData = {
+        //id                    for fake backend
         task,
         isCompleted: !isCompleted
       }
@@ -79,6 +80,7 @@ function App() {
   const updatedTodo = async() =>{
     try {
       const updatedData = {
+        // id: updateId           for fake backend
         task: todoTask,
         isCompleted: false
       }
