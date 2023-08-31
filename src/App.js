@@ -92,6 +92,11 @@ function App() {
     setIsEdit(false)
   }
 
+  const cancelUpdate = () =>{
+    setIsEdit(false)
+    setTodoTask("")
+  }
+
 
   return (
     <div className="app-container">
@@ -102,15 +107,19 @@ function App() {
           {!isEdit ? ( 
             <button className="button add" onClick={addTodo}>Add</button>
             ) : (
+              <>
               <button className="button update" onClick={updatedTodo}>Update</button>
+              <button className="button cancel" onClick={cancelUpdate}>Cancel</button>
+              </>
             )
           }
         </div>
         <hr/>
         <ul className="list-container">
-          {todoList.map((todo) => (
+          {todoList.map((todo, index) => (
             <Todo 
-            list={todo} 
+            list={todo}
+            index={index} 
             key={todo.id} 
             deleteItem={deleteItem}
             clickItem={clickItem}
