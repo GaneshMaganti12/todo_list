@@ -6,6 +6,7 @@
 .input-check{
     height: 17px;
     width: 17px;
+    cursor: pointer;
 }
 .label-icon-group{
     display: flex;
@@ -20,6 +21,7 @@
 }
 .label{
     font-size: 16px;
+    cursor: pointer;
 }
 .checked{
     text-decoration: line-through;

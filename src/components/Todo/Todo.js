@@ -8,20 +8,29 @@ function Todo(props) {
 
     const colors = [
         {
-            color: "#5d93e1"
+            color: "#e03324"
         },
         {
-            color: "#5dc250"
+            color: "#24e092"
         },
         {
-            color: "#f48687"
+            color: "#e0b424"
         },
         {
-            color: "#b964f7"
+            color: "#2de024"
         },
         {
-            color: "#f9d288"
-        }
+            color: "#9be024"
+        },
+        {
+            color: "#7224e0"
+        },
+        {
+            color: "#9be024"
+        },
+        {
+            color: "#24d7e0"
+        },
     ]
 
   return (
