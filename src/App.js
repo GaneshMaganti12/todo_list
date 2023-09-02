@@ -17,7 +17,7 @@ function App() {
 
   const getData = async() =>{
     try {
-      const res = await axios.get("http://localhost:3001/todolist")
+      const res = await axios.get("https://todo-list-a95f.onrender.com/todolist/todos")
       // setTodoList(res.data)               for fake backend
       setTodoList(res.data.data.map((todo) => {                 // for database backend
         return {
@@ -39,7 +39,7 @@ function App() {
     }
 
     try {
-      await axios.post("http://localhost:3001/todolist", newData)
+      await axios.post("https://todo-list-a95f.onrender.com/todolist", newData)
     } catch (error) {
       console.log(error)
     }
@@ -49,7 +49,7 @@ function App() {
 
   const deleteItem = async(id) =>{
     try {
-      await axios.delete(`http://localhost:3001/todolist/${id}`)
+      await axios.delete(`https://todo-list-a95f.onrender.com/todolist/${id}`)
     } catch (error) {
       console.log(error);
     } 
@@ -63,7 +63,7 @@ function App() {
         task,
         isCompleted: !isCompleted
       }
-      await axios.patch(`http://localhost:3001/todolist/${id}`, updatedData)
+      await axios.patch(`https://todo-list-a95f.onrender.com/todolist/${id}`, updatedData)
     } catch (error) {
       console.log(error);
     }
@@ -84,12 +84,13 @@ function App() {
         task: todoTask,
         isCompleted: false
       }
-      await axios.patch(`http://localhost:3001/todolist/${updateId}`, updatedData)
+      await axios.patch(`https://todo-list-a95f.onrender.com/todolist/${updateId}`, updatedData)
     } catch (error) {
       console.log(error);
     }
     getData()
     setIsEdit(false)
+    setTodoTask("")
   }
 
   const cancelUpdate = () =>{
